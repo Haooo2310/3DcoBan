@@ -1,60 +1,35 @@
 ﻿using UnityEngine;
 
-public class ThirdPersonCamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    public Transform target;       // Player
-    public Transform cam;          // Main Camera
-    public float mouseSensitivity = 150f;
-    public float distance = 3f;    // Khoảng cách camera
-    public float minY = -30f;      // Giới hạn nhìn xuống
-    public float maxY = 60f;       // Giới hạn nhìn lên
+    public float sensitivity = 100f; // Độ nhạy của chuột
+    public Transform playerBody;     // Kéo đối tượng Player vào đây trong Inspector
 
-    private float rotX = 0f;
-    private bool mouseLocked = true;
+    float xRotation = 0f;
 
     void Start()
     {
-        LockMouse(true);
+        // Ẩn con trỏ chuột và khóa nó ở giữa màn hình
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    void Update()   
     {
-        // Toggle chuột bằng Alt
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            mouseLocked = !mouseLocked;
-            LockMouse(mouseLocked);
-        }
+        // 1. Lấy đầu vào chuột
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        if (!mouseLocked) return;
+        // 2. Xoay Camera theo chiều dọc (Nhìn lên/xuống)
+        // Camera xoay quanh trục X (pitch)
+        xRotation -= mouseY;
+        // Giới hạn góc nhìn để không bị lật (ví dụ: -90 đến 90 độ)
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        // Áp dụng góc xoay cho Camera
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // Xoay ngang
-        transform.Rotate(Vector3.up * mouseX);
-
-        // Xoay dọc camera
-        rotX -= mouseY;
-        rotX = Mathf.Clamp(rotX, minY, maxY);
-
-        cam.localRotation = Quaternion.Euler(rotX, 0f, 0f);
-
-        // Camera giữ khoảng cách cố định
-        cam.position = transform.position - cam.forward * distance;
-    }
-
-    void LockMouse(bool locked)
-    {
-        if (locked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        // 3. Xoay Player theo chiều ngang (Xoay người)
+        // Player xoay quanh trục Y (yaw)
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 }
