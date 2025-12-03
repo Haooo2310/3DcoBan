@@ -27667,8 +27667,8 @@ MonoBehaviour:
   rb: {fileID: 1897450806}
   jump: 0
   stop: 0
-  walkSpeed: 0.2
-  Runspeed: 2
+  walkSpeed: 0.25
+  Runspeed: 0.7
 --- !u!54 &1897450806
 Rigidbody:
   m_ObjectHideFlags: 0
