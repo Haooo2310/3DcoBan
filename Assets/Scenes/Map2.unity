@@ -29161,7 +29161,7 @@ MonoBehaviour:
   jump: 1
   stop: 0
   walkSpeed: 0.2
-  Runspeed: 1
+  Runspeed: 0.7
 --- !u!54 &1248931475
 Rigidbody:
   m_ObjectHideFlags: 0
