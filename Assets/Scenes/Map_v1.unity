@@ -13713,7 +13713,7 @@ Camera:
   m_GameObject: {fileID: 900556858}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -23438,9 +23438,9 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 5428595859459408495
   - rid: 5428595859459408496
-  - rid: 5428595859459408497
-  - rid: 5428595859459408498
-  - rid: 5428595859459408499
+  - rid: 5428595860857160179
+  - rid: 5428595860857160178
+  - rid: 5428595860857160177
   m_OriginalGraph: {fileID: -8787692763220385054, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -23463,32 +23463,32 @@ MonoBehaviour:
           m_Value1: 18269671002290091265
         Name: Player
         m_Value: {fileID: 1897450804}
-    - rid: 5428595859459408497
-      type: {class: 'SharedBlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 17730306159380601744
-          m_Value1: 16598881910681119236
-        Name: Attackrange
-        m_Value: 0
-        m_SharedVariablesRuntimeAsset: {fileID: -6349690917163837839, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
-    - rid: 5428595859459408498
-      type: {class: 'SharedBlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12796001672353703614
-          m_Value1: 12020748282772497813
-        Name: DeleAttackRange
-        m_Value: 0
-        m_SharedVariablesRuntimeAsset: {fileID: -6349690917163837839, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
-    - rid: 5428595859459408499
+    - rid: 5428595860857160177
       type: {class: 'SharedBlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 1899583701902771206
-          m_Value1: 167282063940227143
+          m_Value0: 9060192187999272251
+          m_Value1: 7692122938295353449
         Name: Animator
         m_Value: {fileID: 0}
+        m_SharedVariablesRuntimeAsset: {fileID: -6349690917163837839, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
+    - rid: 5428595860857160178
+      type: {class: 'SharedBlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10811083967119556762
+          m_Value1: 7812673534114077622
+        Name: AttackRange
+        m_Value: 0
+        m_SharedVariablesRuntimeAsset: {fileID: -6349690917163837839, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
+    - rid: 5428595860857160179
+      type: {class: 'SharedBlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12501230594280248517
+          m_Value1: 9639284617907197584
+        Name: DeleAttack
+        m_Value: 0
         m_SharedVariablesRuntimeAsset: {fileID: -6349690917163837839, guid: 7c7bbf448be4bd848a6e6cd732b1ceea, type: 2}
 --- !u!195 &1531895222
 NavMeshAgent:
