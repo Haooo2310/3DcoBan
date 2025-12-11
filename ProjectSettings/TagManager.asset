@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - HitBox
+  - Zombie
   layers:
   - Default
   - TransparentFX
