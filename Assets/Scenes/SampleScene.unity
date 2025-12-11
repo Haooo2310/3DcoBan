@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_Name
-      value: PlayerArmature
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_Avatar
@@ -1272,11 +1272,11 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1486105207}
+  - {fileID: 266374187}
   - {fileID: 1852697726655076899}
   - {fileID: 1969320647}
   - {fileID: 27009733}
   - {fileID: 816610742}
   - {fileID: 969427021}
   - {fileID: 2000495733}
-  - {fileID: 266374187}
   - {fileID: 1336825514}
